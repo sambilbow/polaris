@@ -807,7 +807,7 @@ Camera:
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
-  m_FOVAxisMode: 1
+  m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
   m_FocalLength: 50
@@ -819,7 +819,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 1000
-  field of view: 43.01793
+  field of view: 70
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -926,10 +926,10 @@ MonoBehaviour:
     LeftCamera: {fileID: 6075467949439196423}
     RightCamera: {fileID: 6075467950788041349}
     RequiresRotation: 1
-    LeftProjectionMatrix: []
-    RightProjectionMatrix: []
-    LeftInvProjectionMatrix: []
-    RightInvProjectionMatrix: []
+    LeftPolynomialProjectionMatrix: []
+    RightPolynomialProjectionMatrix: []
+    PerEyeProjectionMatrix: []
+    PerEyeProjectionMatrixInv: []
   myEyeBorders:
     minXLeft: 0
     maxXLeft: 1
@@ -1359,7 +1359,7 @@ Camera:
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
-  m_FOVAxisMode: 1
+  m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
   m_FocalLength: 50
@@ -1371,7 +1371,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 1000
-  field of view: 43.01793
+  field of view: 70
   orthographic: 0
   orthographic size: 5
   m_Depth: 0

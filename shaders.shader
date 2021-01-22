@@ -8,10 +8,10 @@ cbuffer ShaderVals : register(b0){
 	float4x4 leftUvToRectY;
 	float4x4 rightUvToRectX;
 	float4x4 rightUvToRectY;
-    float4x4 cameraMatrixLeft;
-    float4x4 cameraMatrixRight;
-    float4x4 invCameraMatrixLeft;
-    float4x4 invCameraMatrixRight;    
+    float4x4 cameraMatrixLeftPolynomial;
+    float4x4 cameraMatrixRightPolynomial;
+    float4x4 cameraProjectionMatrixPerEye;
+    float4x4 cameraProjectionMatrixPerEyeInv;
 	float4 eyeBordersLeft;
 	float4 eyeBordersRight;
 	float4 offsets;
@@ -66,23 +66,46 @@ float2 resolveTemporalWarping(float2 inputUV, float4x4 DeltaPose){
         float4 depthProbe = float4(0.0,0.0,planeDepth,1.0); // Point in initial screen space 1, depth 1
         float4 viewRay = float4(inputUV.x,inputUV.y,planeDepth,1.0); // point in final screen space
         
-        float4 d = mul(cameraMatrixLeft,depthProbe); // Point in initial world space      
+        float4 d = mul(cameraProjectionMatrixPerEye,depthProbe); // Point in initial world space      
         float4 O = mul(DeltaPose,float4(0.0,0.0,0.0,1.0)); //Origin of future pose        
-        float4 P = mul(hardCodedBias,viewRay); P = mul(invCameraMatrixLeft,P);  // point in final world space
+        float4 P = mul(hardCodedBias,viewRay); P = mul(cameraProjectionMatrixPerEyeInv,P);  // point in final world space
         P = mul(DeltaPose,P); //point in final world space
         float4 V = normalize(P - O);
         float4 unitPlaneNormal = float4(0.0,0.0,1.0,1.0);
         float s = dot(unitPlaneNormal,V);
         float t = (O - dot(unitPlaneNormal,V))/s;
         float4 OX = V * t; //get the vector to the plane reprojected
-        float4 retd = mul(cameraMatrixLeft,OX);
+        float4 retd = mul(cameraProjectionMatrixPerEye,OX);
+        retd = mul(hardCodedInverseBias,retd);
+        float3 retdd = float3(retd.x/retd.w,retd.y/retd.w,retd.z/retd.w);
+        return float2( (retdd.x),(retdd.y));
+}
+
+float2 resolveTemporalWarpingDistortion(float2 inputUV, float4x4 DeltaPose){
+        float4x4 hardCodedBias = {2,0,0,-1.0,0,2,0,-1.0,0,0,2,0,0,0,0,1};  
+        float4x4 axisFlip = {0,1,0,0,1,0,0,0,0,0,1,0,0,0,0,1};          
+        float4x4 hardCodedInverseBias = {0.5,0,0, 0.5,0,0.5,0,0.5,0,0,0.5,0,0,0,0,1};          
+        float planeDepth = 0.25;     
+        float4 depthProbe = float4(0.0,0.0,planeDepth,1.0); // Point in initial screen space 1, depth 1
+        float4 viewRay = float4(inputUV.x,inputUV.y,planeDepth,1.0); // point in final screen space
+        float4x4 DeltaPoseFlipped = mul(DeltaPose,axisFlip);
+        float4 d = mul(cameraProjectionMatrixPerEye,depthProbe); // Point in initial world space      
+        float4 O = mul(DeltaPoseFlipped,float4(0.0,0.0,0.0,1.0)); //Origin of future pose        
+        float4 P = mul(hardCodedBias,viewRay); P = mul(cameraProjectionMatrixPerEyeInv,P);  // point in final world space
+        P = mul(DeltaPoseFlipped,P); //point in final world space
+        float4 V = normalize(P - O);
+        float4 unitPlaneNormal = float4(0.0,0.0,1.0,1.0);
+        float s = dot(unitPlaneNormal,V);
+        float t = (O - dot(unitPlaneNormal,V))/s;
+        float4 OX = V * t; //get the vector to the plane reprojected
+        float4 retd = mul(cameraProjectionMatrixPerEye,OX);
         retd = mul(hardCodedInverseBias,retd);
         float3 retdd = float3(retd.x/retd.w,retd.y/retd.w,retd.z/retd.w);
         return float2( (retdd.x),(retdd.y));
 }
 float4 resolveWithoutDistortion(float xSettled, float ySettled){            
     if(xSettled < 0.5){//we render the left eye
-        float2 newTex = float2(ySettled,xSettled*2);// input quad UV in world space (should be between 0-1)                
+        float2 newTex = float2(xSettled*2,ySettled);// input quad UV in world space (should be between 0-1)                
         float2 distorted_uv = resolveTemporalWarping(newTex,DeltaPoseLeft); // perform the temporal warping
         if(toggleConfigs.x != 0.0){
             distorted_uv = newTex;
@@ -93,7 +116,7 @@ float4 resolveWithoutDistortion(float xSettled, float ySettled){
             return txDiffuseLeft.Sample(samLinear, distorted_uv)* toggleConfigs.y;
         }
     }else{//we render the right eye        
-        float2 newTex = float2(ySettled,(xSettled-0.5)*2); //input quad UV in world space (should be between 0-1)          
+        float2 newTex = float2((xSettled-0.5)*2,ySettled); //input quad UV in world space (should be between 0-1)          
         float2 distorted_uv = resolveTemporalWarping(newTex,DeltaPoseRight); // perform the temporal warping
 
         if(distorted_uv.x < eyeBordersLeft.x || distorted_uv.x > eyeBordersLeft.y || distorted_uv.y < eyeBordersLeft.z || distorted_uv.y > eyeBordersLeft.w){
@@ -104,38 +127,44 @@ float4 resolveWithoutDistortion(float xSettled, float ySettled){
     }
     return float4(0.0,0.0,0.0,1.0);
 }
-float4 resolveWithDistortion(float xSettled, float ySettled){
+float4 resolveWithDistortion(float xSettledIn, float ySettledIn){
+    float xSettled = 1.0 - xSettledIn;
+    float ySettled = ySettledIn;
     if(xSettled < 0.5){//we render the left eye
         float2 newTex = float2(xSettled*2,ySettled);// input quad UV in world space (should be between 0-1)
         float3 rectilinear_coordinate = float3(polyval2d(1.0-newTex.x, newTex.y, rightUvToRectX),polyval2d(1.0 - newTex.x, newTex.y, rightUvToRectY), 1.0); //resolve the 2D polynomial to get a modified world space UV
-        float2 distorted_uv = WorldToViewportInnerVec(cameraMatrixRight,rectilinear_coordinate); //project back into screen space
+        float2 distorted_uv = WorldToViewportInnerVec(cameraMatrixRightPolynomial,rectilinear_coordinate); //project back into screen space
         distorted_uv += float2(offsets.z,offsets.w); //apply a screen space UV offset
+        distorted_uv = float2(((distorted_uv.x)),(1.0-((distorted_uv.y*0.5)+0.25)));
+
         if(toggleConfigs.x == 0.0){
-            distorted_uv = resolveTemporalWarping(distorted_uv,DeltaPoseLeft);        //Should do things here for reprojection ....
+            distorted_uv = resolveTemporalWarpingDistortion(distorted_uv.yx,DeltaPoseLeft);        //Should do things here for reprojection ....
         }
         if(distorted_uv.x < eyeBordersRight.x || distorted_uv.x > eyeBordersRight.y || distorted_uv.y < eyeBordersRight.z || distorted_uv.y > eyeBordersRight.w)//ensure the UVS are within the set bounds for the eye
         return float4(0.0,0.0,0.0,1.0);//if outside, return black (prevent)
         else
-        return txDiffuseLeft.Sample(samLinear, distorted_uv)* toggleConfigs.y;
+        return txDiffuseLeft.Sample(samLinear, distorted_uv.yx)* toggleConfigs.y;
     }else{//we render the right eye
         float2 newTex = float2((xSettled-0.5)*2,ySettled);  
         float3 rectilinear_coordinate = float3(polyval2d(1.0-newTex.x, newTex.y, leftUvToRectX),polyval2d(1.0 - newTex.x, newTex.y, leftUvToRectY), 1.0);
-        float2 distorted_uv = WorldToViewportInnerVec(cameraMatrixLeft,rectilinear_coordinate);
+        float2 distorted_uv = WorldToViewportInnerVec(cameraMatrixLeftPolynomial,rectilinear_coordinate);
         distorted_uv += float2(offsets.x,offsets.y);
+
+        distorted_uv = float2(((distorted_uv.x)),(1.0-((distorted_uv.y*0.5)+0.25)));
         if(toggleConfigs.x == 0.0){
-            distorted_uv = resolveTemporalWarping(distorted_uv,DeltaPoseRight);        
-        }
+            distorted_uv = resolveTemporalWarpingDistortion(distorted_uv.yx,DeltaPoseRight);        
+        }        
         if(distorted_uv.x < eyeBordersLeft.x || distorted_uv.x > eyeBordersLeft.y || distorted_uv.y < eyeBordersLeft.z || distorted_uv.y > eyeBordersLeft.w)
         return float4(0.0,0.0,0.0,1.0);
         else
-        return txDiffuseRight.Sample(samLinear, distorted_uv)* toggleConfigs.y;        
+        return txDiffuseRight.Sample(samLinear, distorted_uv.yx)* toggleConfigs.y;        
     }
     return float4(0.0,0.0,0.0,1.0);
 }
 //note the left and right eyes are flipped due to the NorthStar rendering being upside down
 float4 PShader(float4 position : SV_POSITION, float2 tex: TEXCOORD) : SV_TARGET
 {
-    float xSettled = 1.0-(tex.x); // flip the X axis since the screen is upside down
+    float xSettled = tex.x; // flip the X axis since the screen is upside down
     float ySettled = tex.y; //we can use the raw Y
     return resolveWithDistortion(xSettled,ySettled);
 }

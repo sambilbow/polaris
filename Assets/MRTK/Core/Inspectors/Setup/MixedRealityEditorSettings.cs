@@ -103,7 +103,7 @@ namespace Microsoft.MixedReality.Toolkit.Utilities.Editor
             // with legacy requirements.
             if (!XRSettingsUtilities.LegacyXREnabled)
             {
-                Debug.LogWarning("<b>Virtual reality supported</b> not enabled. Check <i>XR Settings</i> under <i>Player Settings</i>");
+//                Debug.LogWarning("<b>Virtual reality supported</b> not enabled. Check <i>XR Settings</i> under <i>Player Settings</i>");
             }
 
             if (!MixedRealityOptimizeUtils.IsOptimalRenderingPath())

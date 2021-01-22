@@ -310,7 +310,7 @@ namespace ProjectEsky.Tracking{
                         Marshal.Copy(deltaPoseReadbackRight,0,writebackArray,15);                     
                     }
                 }catch(System.Exception e){
-
+                    Debug.LogError(e);
                 }
             }
         }
