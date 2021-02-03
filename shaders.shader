@@ -1,7 +1,11 @@
 
 Texture2D txDiffuseLeft;
 Texture2D txDiffuseRight;
+
 SamplerState samLinear;
+Texture2D txUndistortionDiffuseRight;
+Texture2D txUndistortionDiffuseLeft;
+
 
 cbuffer ShaderVals : register(b0){	
     float4x4 leftUvToRectX;
@@ -132,10 +136,36 @@ float4 resolveWithDistortion(float xSettled, float ySettled){
     }
     return float4(0.0,0.0,0.0,1.0);
 }
+float4 resolveLUT(float xSettled, float ySettled){
+    if(xSettled < 0.5){//we render the left eye
+        float2 newTex = float2(xSettled*2,ySettled);// input quad UV in world space (should be between 0-1)
+        newTex += float2(offsets.z,offsets.w); //apply a screen space UV offset
+        float2 resolvedUndistortion = txUndistortionDiffuseLeft.Sample(samLinear, newTex).xy; //project back into screen space
+        if(toggleConfigs.x == 0.0){
+            resolvedUndistortion = resolveTemporalWarping(resolvedUndistortion,DeltaPoseLeft);        //Should do things here for reprojection ....
+        }
+        if(resolvedUndistortion.x < eyeBordersRight.x || resolvedUndistortion.x > eyeBordersRight.y || resolvedUndistortion.y < eyeBordersRight.z || resolvedUndistortion.y > eyeBordersRight.w)//ensure the UVS are within the set bounds for the eye
+        return float4(0.0,0.0,0.0,1.0);//if outside, return black (prevent)
+        else
+        return txDiffuseLeft.Sample(samLinear, resolvedUndistortion)* toggleConfigs.y;
+    }else{//we render the right eye
+        float2 newTex = float2((xSettled-0.5)*2,ySettled);  
+        newTex += float2(offsets.x,offsets.y);
+        float2 resolvedUndistortion = txUndistortionDiffuseRight.Sample(samLinear, newTex).xy; //project back into screen space
+        if(toggleConfigs.x == 0.0){
+            resolvedUndistortion = resolveTemporalWarping(resolvedUndistortion,DeltaPoseRight);        
+        }
+        if(resolvedUndistortion.x < eyeBordersLeft.x || resolvedUndistortion.x > eyeBordersLeft.y || resolvedUndistortion.y < eyeBordersLeft.z || resolvedUndistortion.y > eyeBordersLeft.w)
+        return float4(0.0,0.0,0.0,1.0);
+        else
+        return txDiffuseRight.Sample(samLinear, resolvedUndistortion)* toggleConfigs.y;
+    }
+    return float4(0.0,0.0,0.0,1.0);
+}
 //note the left and right eyes are flipped due to the NorthStar rendering being upside down
 float4 PShader(float4 position : SV_POSITION, float2 tex: TEXCOORD) : SV_TARGET
 {
     float xSettled = 1.0-(tex.x); // flip the X axis since the screen is upside down
     float ySettled = tex.y; //we can use the raw Y
-    return resolveWithDistortion(xSettled,ySettled);
+    return resolveLUT(xSettled,ySettled);
 }
