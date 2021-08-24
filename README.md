@@ -22,7 +22,7 @@ This repository is a fork of [Project Esky](https://github.com/HyperLethalVector
 ### Engine (Unity3D / Project Esky) features
 - The ability to create 3D scenes that contain 'GameObjects' that in turn can have visual attributes such as 3D meshes, material colours, and textural properties; physical attributes such as edges, position, mass, velocity and real-time parameterisation via C# scripting.
 - Thanks to Project Esky, the headset is created as a GameObject with real-time position / orientation.
-- Thanks to LeapMotion, hands (all the way down to finger joints) are created as GameObjects with real-time position / orientation relative to the headset.
+- Thanks to [LeapMotion](https://github.com/leapmotion/UnityModules), hands (all the way down to individual finger joints) are created as GameObjects with real-time position / orientation relative to the headset.
 
 
 ### Audio (LibPdIntegration/Pd) features
