@@ -17,7 +17,7 @@ This repository is a fork of [Project Esky](https://github.com/HyperLethalVector
 - Single piece optical combiner allowing for up to 110° horizontal FoV
 - 2x 120Hz displays per-eye for a total resolution of 2880x1600 
 - 2x 3-metre cables (1x miniDP, 1x USB-A 3.1)
-- Spatial audio AR (the ability to hear localised sound whilst being able to hear your real audio environment) via Unity3D and [Aftershokz Aeropex](https://aftershokz.co.uk/products/aeropex)
+- Spatial audio AR (the ability to hear localised sound whilst being able to hear your real audio environment) via Unity3D and [Aftershokz Aeropex](https://aftershokz.co.uk/products/aeropex) bone conduction headphones.
 
 ### Engine (Unity3D / Project Esky) features
 - The ability to create 3D scenes that contain 'GameObjects' that in turn can have visual attributes such as 3D meshes, material colours, and textural properties; physical attributes such as edges, position, mass, velocity and real-time parameterisation via C# scripting.
