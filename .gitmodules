@@ -1,0 +1,3 @@
+[submodule "Assets/polaris-libpd"]
+	path = Assets/polaris-libpd
+	url = https://github.com/sambilbow/polaris-libpd.git
