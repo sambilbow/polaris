@@ -69,9 +69,9 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _PressIntensity: 0.00027412316
-    - _PressRimPower: 3.72
-    - _RimPower: 8
+    - _PressIntensity: 0
+    - _PressRimPower: 4.59
+    - _RimPower: 3.45
     - _SecondOutlineWidth: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
