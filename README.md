@@ -34,14 +34,16 @@ This repository is a fork of [Project Esky](https://github.com/HyperLethalVector
 
 ## Caveats
 Although there is a great deal that could be done to ensure equity of computational power around the planet, polaris~ strives to use completely **open-source, free and, where possible cross-platform**, elements in order to increase accessibility to cutting-edge AR technologies for those who often can't afford the mainstream consumer alternatives. The only exceptions to this so far is:
+- polaris~ requires a computer to create the scenes in Unity.
+  - *Cheaper wearable compute packs are currently being prototyped by CombineReality.*
+- Project Esky being Windows only. This is because there is no up-to-date MacOS Ultraleap (hand tracking) driver. 
+  - *Ultraleap are working on this for their V5 release (some time in 2021), but would still require a Project Esky rewrite as far as I know*
 - The firmware code for the head-tracker is not open-sourced by Intel `and the product range has just been discontinued!!` Whilst this is not necessary for the project, it could have allowed further interaction. 
   - *Some geniuses are working on implementing open-source modular [Luxonis](https://shop.luxonis.com/collections/modular-cameras) cameras to replace the head-tracking sensor that the project currently relies on Intel for*
 - My audio AR solution, which is currently a set of wireless [Aftershokz Aeropex](https://aftershokz.co.uk/products/aeropex) bone conduction headphones are pricy. 
-  - *I am very interested in desigining a bone conduction transducer design which is mounted to the headset itself, similar to how the Vive VR headset has speakers that are attached to its main body.*
-- Project Esky being Windows only. This is because there is no up-to-date MacOS Ultraleap (hand tracking) driver. 
-  - *Ultraleap are working on this for their V5 release (some time in 2021), but would still require a Project Esky rewrite as far as I know*
-- polaris~ requires a computer to create the scenes in Unity.
-  - *Cheaper wearable compute packs are currently being prototyped by CombineReality).*
+  - *I am very interested in desigining a bone conduction transducer design which is mounted to the headset itself, similar to how the Vive VR headset has speakers that are attached to its main body. Alternatively, cheaper bone-conduction headphones can be used.*
+
+
 
 ## Quickstart
 `Coming Soon`
@@ -52,7 +54,9 @@ Although there is a great deal that could be done to ensure equity of computatio
 
 ## Inspiration and Similar Projects
 - [Listening Mirrors](http://listeningmirrors.net/): an audio AR interactive installation by my PhD supervisors
-- [Keijiro Takahashi](https://github.com/keijiro) and their work with audio-reactivity in Unity.
+- [Laetitia Sonami](https://sonami.net/): pioneer in early glove-based interactive music systems
+- [Atau Tanaka](https://www.youtube.com/watch?v=p8CKjmE7zys): interactive gestural synthesis using muscle sensors
+- [Keijiro Takahashi](https://github.com/keijiro) specifically their work with audio-reactivity in Unity.
 - [Tekh:2](https://github.com/TEKH2/XR-Audio-Visual-Instruments) with their work with XR instruments using granular synthesis in Unity.
 
 ## Acknowledgements
