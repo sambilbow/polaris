@@ -2354,7 +2354,7 @@
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
+10 -262144 -1 -1 1 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -2516,7 +2516,7 @@
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
+10 -262144 -1 -1 1 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -2788,7 +2788,7 @@
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
+10 -262144 -1 -1 2 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -4195,7 +4195,7 @@
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
+10 -262144 -1 -1 1 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -4683,7 +4683,7 @@
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
+10 -262144 -1 -1 1 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -5180,7 +5180,7 @@ more elaborate pd-code for deeper control.;
 #X obj 204 151 r open-organelle-map!;
 #X msg 204 198 \; pd-organelle-map vis \$1;
 #X obj 203 272 r open-modules!;
-#N canvas 1709 30 812 608 modules 1;
+#N canvas 1709 30 812 608 modules 0;
 #X obj 196 91 cnv 15 180 15 empty empty MODULATION: 10 8 0 12 -158136
 -262144 0;
 #X obj 196 112 bng 15 250 50 0 \$0-create-basic-lfo! empty <--BASIC-LFO
@@ -5545,7 +5545,7 @@ to start over at zero. PRESS THE BUTTON BELOW TO RESET:;
 #X msg 601 193 \; pd-reset-warning vis 0;
 #X obj 601 139 delay 500;
 #X msg 604 289 1;
-#N canvas 472 160 457 575 external-msg 0;
+#N canvas 1671 97 457 575 external-msg 1;
 #X obj 17 12 cnv 15 400 60 empty empty EXTERNAL_MESSAGES 20 12 0 14
 -226533 -262144 0;
 #X text 27 86 You can send external control messages into Automatonism
@@ -6631,3 +6631,90 @@ and send to the name of the module \, for example [s basic-osc];
 #X text 261 219 on the gameobject's xyz;
 #X text 261 235 coordinates.;
 #X text 261 53 This patch is a modified;
+#X obj 788 481 basic-osc 1;
+#X obj 788 963 libwiz4;
+#X obj 789 610 lp-filter 1;
+#X obj 789 151 mega-sequencer 1;
+#X obj 790 48 bng 50 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 790 107 1 0 \, 0 1 1;
+#X obj 790 129 vline~;
+#X obj 8 260 cnv 15 462 900 empty empty empty 20 12 0 14 -204786 -66577
+0;
+#X obj 27 269 cnv 5 5 5 empty empty unity_receives 0 12 0 15 -204786
+-66577 0;
+#X obj 994 481 basic-lfo 1;
+#X obj 788 714 starlight 1;
+#X obj 995 604 basic-lfo 2;
+#X obj 790 27 r inSeqTrigger;
+#X obj 28 346 r inSeqTrigger;
+#X text 147 345 trigger sequencer step;
+#X obj 28 448 r inOscFreq;
+#X text 150 447 change osc freq centre;
+#X obj 28 761 r inFilterCF;
+#X text 150 566 change pwm mod freq;
+#X text 150 643 change pwm mod depth;
+#X text 149 760 change filter cf centre;
+#X obj 28 828 r inFilterQ;
+#X text 149 827 change filter Q strength;
+#X obj 28 895 r inFilterFM;
+#X text 149 894 change filter cf attenuator;
+#X obj 28 1013 r inCFLFOFreq;
+#X obj 28 1080 r inCFLFODepth;
+#X obj 28 644 r inPWMLFODepth;
+#X obj 28 567 r inPWMLFOFreq;
+#X text 149 1012 change cf mod freq;
+#X text 149 1076 change cf mod depth;
+#X msg 28 469 PITCH \$1 1;
+#X obj 28 490 s basic-osc;
+#X msg 28 588 FREQ \$1 1;
+#X obj 28 609 s basic-lfo;
+#X msg 28 665 DEPTH \$1 1;
+#X obj 28 686 s basic-lfo;
+#X msg 28 782 CUTOFF \$1 1;
+#X obj 28 803 s lp-filter;
+#X msg 28 849 Q \$1 1;
+#X obj 28 870 s lp-filter;
+#X msg 28 916 FM-/+ \$1 1;
+#X obj 28 937 s lp-filter;
+#X msg 28 1034 FREQ \$1 2;
+#X obj 28 1055 s basic-lfo;
+#X msg 28 1101 DEPTH \$1 2;
+#X obj 28 1122 s basic-lfo;
+#X obj 370 307 cnv 5 5 5 empty empty sequencer 0 12 0 15 -204786 -66577
+0;
+#X obj 365 412 cnv 5 5 5 empty empty oscillator 0 12 0 15 -204786 -66577
+0;
+#X obj 336 535 cnv 5 5 5 empty empty lfo1(osc-pwm) 0 12 0 15 -204786
+-66577 0;
+#X obj 400 730 cnv 5 5 5 empty empty filter 0 12 0 15 -204786 -66577
+0;
+#X obj 286 981 cnv 5 5 5 empty empty lfo2(osc-filter-cf) 0 12 0 15
+-204786 -66577 0;
+#X connect 26 0 28 0;
+#X connect 28 0 36 0;
+#X connect 29 0 26 0;
+#X connect 30 0 31 0;
+#X connect 31 0 32 0;
+#X connect 32 0 29 0;
+#X connect 35 0 26 1;
+#X connect 36 0 27 0;
+#X connect 36 1 27 1;
+#X connect 37 0 28 1;
+#X connect 38 0 30 0;
+#X connect 41 0 57 0;
+#X connect 43 0 63 0;
+#X connect 47 0 65 0;
+#X connect 49 0 67 0;
+#X connect 51 0 69 0;
+#X connect 52 0 71 0;
+#X connect 53 0 61 0;
+#X connect 54 0 59 0;
+#X connect 57 0 58 0;
+#X connect 59 0 60 0;
+#X connect 61 0 62 0;
+#X connect 63 0 64 0;
+#X connect 65 0 66 0;
+#X connect 67 0 68 0;
+#X connect 69 0 70 0;
+#X connect 71 0 72 0;
