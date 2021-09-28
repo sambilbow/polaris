@@ -280,6 +280,6 @@
         "SensorFoV": 0.0
     },
     "usesExternalRGBCamera": false,
-    "UsesCameraPreview": true,
+    "UsesCameraPreview": false,
     "UseTrackerOffsets": true
 }

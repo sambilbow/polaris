@@ -77,9 +77,9 @@ Material:
     - _Outline: 0.01
     - _OutlineWidth: 0.007
     - _Parallax: 0.02
-    - _PressIntensity: 0
+    - _PressIntensity: 1
     - _PressRimPower: 0.5
-    - _RimPower: 0.5
+    - _RimPower: 7.05
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -88,7 +88,7 @@ Material:
     - _ZTest: 4
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0, g: 0, b: 0, a: 1}
+    - _Color: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineColor: {r: 0, g: 1, b: 0.95862055, a: 1}
     - _PressColor: {r: 0.28475437, g: 0.52133965, b: 0.745283, a: 1}
