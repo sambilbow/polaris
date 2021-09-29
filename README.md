@@ -11,7 +11,7 @@ This repository is a fork of [Project Esky](https://github.com/HyperLethalVector
 - A set of example scripts and scenes that use them to demonstrate possible interactions between head/hand tracking and patch parameters in Pd, with the chief aim of creating a set of expressive multisensory AR instruments / experiences.
 
 ## September Progress
-
+[![particle synthesizers](september.png)](https://www.youtube.com/watch?v=gY2QtK907cU "particle synthesizers")
 
 ## Features
 ### Hardware features
