@@ -5,15 +5,15 @@
     "nativeShaderToUse": 0,
     "myOffsets": {
         "TranslationEyeToLeapMotion": {
-            "x": 0.019999999552965165,
-            "y": 0.07000000029802323,
-            "z": 0.053352318704128268
+            "x": 0.017747104167938234,
+            "y": 0.06225927174091339,
+            "z": 0.036103133112192157
         },
         "RotationEyeToLeapMotion": {
-            "x": 0.08500000089406967,
-            "y": 0.0,
-            "z": -0.012000000104308129,
-            "w": 0.9959999918937683
+            "x": 0.060318127274513248,
+            "y": 0.01222545187920332,
+            "z": -0.026881305500864984,
+            "w": 0.9977422952651978
         },
         "TranslationFromTracker": {
             "x": 0.0,
@@ -27,15 +27,15 @@
             "w": 1.0
         },
         "RGBSensorTranslationFromTracker": {
-            "x": -0.03500000014901161,
+            "x": 0.0,
             "y": 0.0,
-            "z": -0.02800000086426735
+            "z": 0.0
         },
         "RGBSensorRotationFromTracker": {
-            "x": 0.257999986410141,
-            "y": 0.05900000035762787,
-            "z": 0.01600000075995922,
-            "w": 0.9639999866485596
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 1.0
         }
     },
     "v2CalibrationValues": {
@@ -257,8 +257,8 @@
         }
     },
     "displayWindowSettings": {
-        "DisplayXLoc": 0,
-        "DisplayYLoc": 1080,
+        "DisplayXLoc": 2560,
+        "DisplayYLoc": 0,
         "DisplayWidth": 2880,
         "DisplayHeight": 1600,
         "EyeTextureWidth": 1600,
@@ -281,6 +281,6 @@
     },
     "usesExternalRGBCamera": false,
     "UsesCameraPreview": true,
-    "UseTrackerOffsets": true,
+    "UseTrackerOffsets": false,
     "UseNetworkingDebugVis": false
 }
