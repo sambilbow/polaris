@@ -8,7 +8,6 @@ public class emissionSpherePd : MonoBehaviour
     public LibPdInstance pdPatch;
     public ParticleSystem ps;
     public Transform handModel;
-    public Transform palmAnchor;
     private FingerDirection fingerDirection;
     private float particleCount;
     //private FingerDirection fingerDirection;
@@ -27,11 +26,8 @@ public class emissionSpherePd : MonoBehaviour
         //float angle = handModel.GetComponent<FingerDirection>().angleTo;
         float angle = handModel.GetComponent<PalmDirection>().angleTo;
         angle = ((((angle/180)+1)/-1)+2);
-    
         pdPatch.SendFloat("emission_resonance", angle);
-    
-        ps.transform.position =  palmAnchor.transform.position;
-        ps.transform.rotation =  palmAnchor.transform.rotation;
+
     }
 
     public void activateAudio(){
