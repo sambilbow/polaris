@@ -16,7 +16,7 @@ public class particleManager : MonoBehaviour
     public particleAudio leftHandAudio;
     public particleAudio rightHandAudio;
     public GameObject toggleButton;
-    private int toggleButtonState;
+    public bool toggleButtonState;
     // Update is called once per frame
    void Start(){
        
@@ -27,22 +27,26 @@ public class particleManager : MonoBehaviour
     void Update()
     {
         // left hand 
-        if(leftHandModel != null && leftHandModel.IsTracked && toggleButtonState == 1){
+        if(leftHandModel != null && leftHandModel.IsTracked && toggleButtonState == true)
+        {
             leftHandParticleSystem.Play();
             leftHandAudio.startAudio();
         }
-        else{
+        else
+        {
             leftHandParticleSystem.Stop();
             leftHandAudio.stopAudio();
         }
                 
 
         // right hand
-        if(rightHandModel != null && rightHandModel.IsTracked && toggleButtonState == 1){
+        if(rightHandModel != null && rightHandModel.IsTracked && toggleButtonState == true)
+        {
             rightHandParticleSystem.Play();
             rightHandAudio.startAudio();
         }
-        else{
+        else
+        {
             rightHandParticleSystem.Stop();
             rightHandAudio.stopAudio();
         }
@@ -50,10 +54,10 @@ public class particleManager : MonoBehaviour
     }
 
     public void toggleButtonOn(){
-        toggleButtonState = 1; 
+        toggleButtonState = true; 
     }
 
     public void toggleButtonOff(){
-        toggleButtonState = 0;
+        toggleButtonState = false;
     }
 }

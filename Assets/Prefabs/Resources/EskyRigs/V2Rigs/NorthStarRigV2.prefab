@@ -7205,7 +7205,7 @@ GameObject:
   - component: {fileID: 1842383973020045616}
   m_Layer: 0
   m_Name: PreviewCamera
-  m_TagString: Untagged
+  m_TagString: FirstPersonCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11487,6 +11487,7 @@ MonoBehaviour:
     localRotationLeapMotion: []
   LeapMotionCamera: {fileID: 4134478102618409205}
   myAttachedTracker: {fileID: 1108374288927384702}
+  myAttachedTrackerX: {fileID: 0}
   RigCenter: {fileID: 0}
   RenderedGraphicsBrightness: 1
   TargetRendererRate: 120
