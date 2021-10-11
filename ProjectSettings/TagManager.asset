@@ -9,6 +9,8 @@ TagManager:
   - FxTemporaire
   - zomBunny
   - HandInteractionObject
+  - ThirdPersonCamera
+  - FirstPersonCamera
   layers:
   - Default
   - TransparentFX
