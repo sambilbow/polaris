@@ -1,4 +1,4 @@
-#N canvas 23 30 1654 1298 10;
+#N canvas -2371 38 1538 1174 10;
 #X declare -path patch_editor_abs;
 #X obj 8 13 cnv 15 228 242 empty empty empty 20 12 0 14 -232576 -66577
 0;
@@ -4683,7 +4683,7 @@
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 1 256;
+10 -262144 -1 -1 2 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -5180,7 +5180,7 @@ more elaborate pd-code for deeper control.;
 #X obj 204 151 r open-organelle-map!;
 #X msg 204 198 \; pd-organelle-map vis \$1;
 #X obj 203 272 r open-modules!;
-#N canvas 1709 720 812 608 modules 0;
+#N canvas -795 38 748 1174 modules 1;
 #X obj 196 91 cnv 15 180 15 empty empty MODULATION: 10 8 0 12 -158136
 -262144 0;
 #X obj 196 112 bng 15 250 50 0 \$0-create-basic-lfo! empty <--BASIC-LFO

@@ -1,14 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Freya;
 
 public class triggerManager : MonoBehaviour
 {
     public GameObject top;
-    public GameObject paramspace;
+    public Transform paramspace;
     public LibPdInstance pdPatch;
     public Vector3 closestPoint;
-    
+    public Transform bank;
+    private float x1;
 
     // Start is called before the first frame update
     void Start()
@@ -38,7 +40,15 @@ public class triggerManager : MonoBehaviour
         }
         else{
             GetComponent<Collider>().attachedRigidbody.useGravity = false;
-            closestPoint = other.ClosestPoint(transform.position);
+
+
+            closestPoint = other.transform.InverseTransformPoint(this.transform.position);
+            
+            
+
+            GetComponentInChildren<TextMesh>().text = Mathfs.Remap(-0.5f,0.5f,0f,1f,closestPoint.x).ToString();
+
+            pdPatch.SendFloat("lfo3",Mathfs.Remap(-0.5f,0.5f,0f,1f,closestPoint.x));
         }
         
     }
