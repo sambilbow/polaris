@@ -130,7 +130,7 @@ Material:
     - _IridescenceAngle: 0.284
     - _IridescenceIntensity: 0.884
     - _IridescenceThreshold: 0.643
-    - _Metallic: 0.642
+    - _Metallic: 0.377
     - _MipmapBias: -2
     - _Mode: 4
     - _NearLightFade: 0
