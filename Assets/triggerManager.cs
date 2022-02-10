@@ -8,57 +8,62 @@ public class triggerManager : MonoBehaviour
     public GameObject top;
     public Transform paramspace;
     public LibPdInstance pdPatch;
-    public Vector3 closestPoint;
+    public Vector3 marblePosition;
     public Transform bank;
-    private float x1;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    // NOCLIP
     public void removeCollisions() {
         Physics.IgnoreCollision(GetComponent<Collider>(), top.GetComponent<Collider>(), true); 
     
     }
 
+    // CLIP
     public void addbackCollisions(){
         Physics.IgnoreCollision(GetComponent<Collider>(), top.GetComponent<Collider>(), false); 
     }
 
+    // WHEN TRIGGERING A COLLIDER
     private void OnTriggerStay(Collider other) {
+        
+        // IF COLLIDING WITH BACKBOARD TURN ON GRAVITY
         if (other.gameObject.name == "backboard"){
             GetComponent<Collider>().attachedRigidbody.useGravity = true;
 
         }
+        
+        // IF COLLIDING WITH ANYTHING OTHER THAN BACKBOARD TURN OFF GRAVITY
         else{
+
             GetComponent<Collider>().attachedRigidbody.useGravity = false;
 
+            // GET POSITION RELATIVE TO CONTAINER
+            marblePosition = other.transform.InverseTransformPoint(this.transform.position);
+            
+            // DEFINE INDIVIDUAL POSITIONS 
+            float marblePositionX = marblePosition.x;
+            float marblePositionY = marblePosition.y;
+            float marblePositionZ = marblePosition.z;
 
-            closestPoint = other.transform.InverseTransformPoint(this.transform.position);
+            // SHOW DEBUG TEXT FOR POSITIONS
+            paramspace.GetChild(0).GetComponent<TextMesh>().text = Mathfs.Remap(-0.5f,0.5f,0f,1f,marblePositionX).ToString();
+            paramspace.GetChild(1).GetComponent<TextMesh>().text = Mathfs.Remap(-0.5f,0.5f,0f,1f,marblePositionY).ToString();
+            paramspace.GetChild(2).GetComponent<TextMesh>().text = Mathfs.Remap(-0.5f,0.5f,0f,1f,marblePositionZ).ToString();                        
             
             
-
-            GetComponentInChildren<TextMesh>().text = Mathfs.Remap(-0.5f,0.5f,0f,1f,closestPoint.x).ToString();
-
-            pdPatch.SendFloat("lfo3",Mathfs.Remap(-0.5f,0.5f,0f,1f,closestPoint.x));
+            // AUDIO EFFECTS
+            pdPatch.SendFloat("lfo3",Mathfs.Remap(-0.5f,0.5f,0f,1f,marblePosition.x));
         }
         
     }
 
+    // TURN ON PATCH WHEN ENTERING CONTAINER
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.name == "paramspace"){
             pdPatch.SendBang("marbleOn");
         }
     }
 
+    // TURN OFF PATCH WHEN EXITING CONTAINER
     private void OnTriggerExit(Collider other) {
         if (other.gameObject.name == "paramspace"){
             pdPatch.SendBang("marbleOff");
