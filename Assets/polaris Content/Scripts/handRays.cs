@@ -10,7 +10,6 @@ public class handRays : MonoBehaviour
     {
         PointerUtils.SetGazePointerBehavior(PointerBehavior.AlwaysOff);
         PointerUtils.SetHandRayPointerBehavior(PointerBehavior.AlwaysOff);
-
     }
 
     // Update is called once per frame

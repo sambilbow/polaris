@@ -15,7 +15,7 @@ public class particleManager : MonoBehaviour
     public ParticleSystem rightHandParticleSystem;
     public particleAudio leftHandAudio;
     public particleAudio rightHandAudio;
-    public GameObject toggleButton;
+    //public GameObject toggleButton;
     public bool toggleButtonState;
     // Update is called once per frame
    void Start(){
