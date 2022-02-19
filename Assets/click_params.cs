@@ -25,6 +25,9 @@ public class click_params : MonoBehaviour
     void Update()
     {
         s_distance = Mathfs.RemapClamped(0f,0.68f,0f,1f,Vector3.Distance(rh_instr_click_s.transform.position, rh_instr_click_m.transform.position));
+        
+        float reverse_s_distance = Mathfs.Remap(0f,1f,1f,0.4f,s_distance);
+        ps.startLifetime = 2*reverse_s_distance;
 
         s_angular = Mathfs.RemapClamped(0f,3f,0f,1f,rh_instr_click_s.GetComponent<Rigidbody>().angularVelocity.magnitude);
 

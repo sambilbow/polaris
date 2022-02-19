@@ -61,6 +61,9 @@ public class ambi_params : MonoBehaviour
         }
         
         pdPatch.SendFloat("lp2cutoff",Mathfs.RemapClamped(0.0001f,1.8f,0.8f,0.0001f,ambi_scale));
+
+        particle_l.startSize = Mathfs.RemapClamped(0.0001f,1.8f,0.5f,5f,ambi_scale);
+        particle_r.startSize = Mathfs.RemapClamped(0.0001f,1.8f,0.5f,5f,ambi_scale);
     }
 
     void OnTriggerEnter(Collider other){

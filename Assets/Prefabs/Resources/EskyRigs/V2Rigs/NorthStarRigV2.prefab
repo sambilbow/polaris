@@ -5274,7 +5274,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6019798940035943188}
-  - component: {fileID: 7680118486060803714}
   - component: {fileID: 8459075781714107401}
   m_Layer: 0
   m_Name: EyeCenter
@@ -5299,19 +5298,6 @@ Transform:
   m_Father: {fileID: 4006825230845938166}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 32, y: 0, z: 0}
---- !u!114 &7680118486060803714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2915041530088803639}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25a11978ff7e36c4db32d02ff641157c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isAR: 0
 --- !u!81 &8459075781714107401
 AudioListener:
   m_ObjectHideFlags: 0
@@ -11390,6 +11376,7 @@ GameObject:
   - component: {fileID: 4006825230845938166}
   - component: {fileID: 2890445241416919790}
   - component: {fileID: 1108374288927384702}
+  - component: {fileID: 4948871967568105389}
   m_Layer: 0
   m_Name: NorthStarRigRealsenseRGB
   m_TagString: Untagged
@@ -11738,6 +11725,19 @@ MonoBehaviour:
       DoUpdateValues: 0
     trackingSystemUsed: 1
   UseAsyncPosePredictor: 0
+--- !u!114 &4948871967568105389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6250105436719633482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25a11978ff7e36c4db32d02ff641157c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAR: 0
 --- !u!1 &6268186497740137699
 GameObject:
   m_ObjectHideFlags: 0
