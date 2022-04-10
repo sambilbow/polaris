@@ -36,10 +36,10 @@ This repository is a fork of [Project Esky](https://github.com/HyperLethalVector
 [![particle synthesizers](september.png)](https://www.youtube.com/watch?v=gY2QtK907cU "particle synthesizers")
 
 ## October 2021 - User Studies
-[![particle synthesizers](september.png)](https://www.youtube.com/watch?v=gY2QtK907cU "particle synthesizers")
+[![particle synthesizers](october.png)](https://youtu.be/lCBgMs8ULj0 "user study demo")
 
 ## February 2022 - Experimental AR Performance 
-[![particle synthesizers](september.png)](https://www.youtube.com/watch?v=gY2QtK907cU "particle synthesizers")
+[![particle synthesizers](february.png)](https://www.youtube.com/ "experimental performance")
 
 ## Caveats
 Although there is a great deal that could be done to ensure equity of computational power around the planet, polaris~ strives to use completely **open-source, free and, where possible cross-platform**, elements in order to increase accessibility to cutting-edge AR technologies for those who often can't afford the mainstream consumer alternatives. The only exceptions to this so far is:
