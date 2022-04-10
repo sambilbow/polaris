@@ -39,7 +39,7 @@ This repository is a fork of [Project Esky](https://github.com/HyperLethalVector
 [![particle synthesizers](october.png)](https://youtu.be/lCBgMs8ULj0 "user study demo")
 
 ## February 2022 - Experimental AR Performance 
-[![particle synthesizers](february.png)](https://www.youtube.com/ "experimental performance")
+[![particle synthesizers](february.png)](https://youtu.be/9IErsDvhXjM "experimental performance")
 
 ## Caveats
 Although there is a great deal that could be done to ensure equity of computational power around the planet, polaris~ strives to use completely **open-source, free and, where possible cross-platform**, elements in order to increase accessibility to cutting-edge AR technologies for those who often can't afford the mainstream consumer alternatives. The only exceptions to this so far is:
@@ -53,13 +53,12 @@ Although there is a great deal that could be done to ensure equity of computatio
   - *I am very interested in desigining a bone conduction transducer design which is mounted to the headset itself, similar to how the Vive VR headset has speakers that are attached to its main body. Alternatively, cheaper bone-conduction headphones can be used.*
 
 
-
 ## Quickstart
 `Coming Soon`
-### setting up a new instrument/experience project
-### deciding on your hands
-### how to use libpdintegration
-### using libpdintegration with automatonism
+### Setting up a new instrument/experience project
+### Deciding on your hands
+### How to use LibPdIntegration
+### Using LibPdIntegration with Automatonism
 
 ## Inspiration and Similar Projects
 - [Listening Mirrors](http://listeningmirrors.net/): an audio AR interactive installation by my PhD supervisors
