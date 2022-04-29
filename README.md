@@ -10,9 +10,6 @@ This repository is a fork of [Project Esky](https://github.com/HyperLethalVector
 - [Automatonism](https://www.automatonism.com/the-software): a library of [Pure Data Vanilla](https://puredata.info/) patches that emulate modules of a synthesizer.
 - A set of example scripts and scenes that use them to demonstrate possible interactions between head/hand tracking and patch parameters in Pd, with the chief aim of creating a set of expressive multisensory AR instruments / experiences.
 
-## September Progress
-[![particle synthesizers](september.png)](https://www.youtube.com/watch?v=gY2QtK907cU "particle synthesizers")
-
 ## Features
 ### Hardware features
 - Six degrees-of-freedom (3D position / orientation) head tracking via [Intel T261]()
@@ -35,6 +32,15 @@ This repository is a fork of [Project Esky](https://github.com/HyperLethalVector
 - [LibPdIntegration](https://github.com/LibPdIntegration/LibPdIntegration) allows **real-time parameter control** in Unity of any object in a Pd patch via "receive" objects and a specific C# method.
 - The combination of "Play Mode" toggling in Unity, and the quick visual patching style of [Pure Data](https://puredata.info/) means that audio-visual interactions can be **prototyped very rapidly**
 
+## September 2021 - Prototyping Experiences
+[![particle synthesizers](september.png)](https://www.youtube.com/watch?v=gY2QtK907cU "particle synthesizers")
+
+## October 2021 - User Studies
+[![particle synthesizers](october.png)](https://youtu.be/lCBgMs8ULj0 "user study demo")
+
+## February 2022 - Experimental AR Performance 
+[![particle synthesizers](february.png)](https://youtu.be/9IErsDvhXjM "experimental performance")
+
 ## Caveats
 Although there is a great deal that could be done to ensure equity of computational power around the planet, polaris~ strives to use completely **open-source, free and, where possible cross-platform**, elements in order to increase accessibility to cutting-edge AR technologies for those who often can't afford the mainstream consumer alternatives. The only exceptions to this so far is:
 - polaris~ requires a computer to create the scenes in Unity.
@@ -47,13 +53,12 @@ Although there is a great deal that could be done to ensure equity of computatio
   - *I am very interested in desigining a bone conduction transducer design which is mounted to the headset itself, similar to how the Vive VR headset has speakers that are attached to its main body. Alternatively, cheaper bone-conduction headphones can be used.*
 
 
-
 ## Quickstart
 `Coming Soon`
-### setting up a new instrument/experience project
-### deciding on your hands
-### how to use libpdintegration
-### using libpdintegration with automatonism
+### Setting up a new instrument/experience project
+### Deciding on your hands
+### How to use LibPdIntegration
+### Using LibPdIntegration with Automatonism
 
 ## Inspiration and Similar Projects
 - [Listening Mirrors](http://listeningmirrors.net/): an audio AR interactive installation by my PhD supervisors
