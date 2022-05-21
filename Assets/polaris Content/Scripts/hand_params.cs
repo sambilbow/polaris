@@ -88,7 +88,7 @@ public class hand_params : MonoBehaviour
 
 
         // sends
-        pdPatch.SendBang("mega1clock");
+        // commented for dconf pdPatch.SendBang("mega1clock");
         
         
         pdPatch.SendFloat("af1cutoff",hmd_distance);
