@@ -16,8 +16,12 @@ This project uses the open-source [Project North Star](https://docs.projectnorth
 - A set of example scripts and scenes that use the above components to demonstrate possible interactions between head/hand tracking and patch parameters in Pd, with the chief aim of creating a set of expressive multisensory AR instruments / experiences.
 
 ## Demonstration
-[<img alt="particle synthesisers" width="350px" src="particle-video.png" />](https://www.youtube.com/watch?v=gY2QtK907cU)
-[<img alt="user studies" width="350px" src="polaris-video.png" />](https://youtu.be/lCBgMs8ULj0)
+[<img alt="user studies" width="350px" src="study-video.png" />](https://youtu.be/lCBgMs8ULj0)
+[<img alt="particle synthesisers" width="350px" src="particle-video.png" />](https://youtu.be/gY2QtK907cU)
+
+[<img alt="palm synthesisers" width="350px" src="palm-video.png" />](https://youtu.be/miQI4jetETs)
+[<img alt="finger synthesisers" width="350px" src="finger-video.png" />](https://youtu.be/dJUd0186NbA)
+[<img alt="basic libpd patch explanation" width="350px" src="libpd-video.png" />](https://youtu.be/CzJlEEcOt-A)
 
 <details>
 <summary><h2>Features</h2></summary>
