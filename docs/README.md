@@ -8,13 +8,26 @@ This project uses the open-source [Project North Star](https://docs.projectnorth
 [Project Link](https://sambilbow.com/projects/polaris)
 
 [Conference Paper](https://doi.org/10.21428/92fbeb44.8abb9ce6)
-<details>
-<summary><h2>Components</h2></summary>
 
+## Components
 - [Software Companion](https://github.com/HyperLethalVector/ProjectEsky-UnityIntegration) for the [Project North Star](https://docs.projectnorthstar.org/) open-source AR headset that allows developing Unity scenes with MRTK/Leap Motion assets.
 - [LibPdIntegration](https://github.com/LibPdIntegration/LibPdIntegration): a wrapper for [libpd](https://github.com/libpd/libpd) that allows for the implementation of [Pure Data](https://puredata.info/) patches into [Unity](https://unity3d.com/)
 - [Automatonism](https://www.automatonism.com/the-software): a library of [Pure Data Vanilla](https://puredata.info/) patches that emulate modules of a synthesizer.
 - A set of example scripts and scenes that use the above components to demonstrate possible interactions between head/hand tracking and patch parameters in Pd, with the chief aim of creating a set of expressive multisensory AR instruments / experiences.
+
+## Demonstration
+[<img alt="particle synthesisers" width="350px" src="particle-video.png" />](https://www.youtube.com/watch?v=gY2QtK907cU)
+[<img alt="user studies" width="350px" src="polaris-video.png" />](https://youtu.be/lCBgMs8ULj0)
+
+<details>
+<summary><h2>Inspiration and Similar Projects</h2></summary>
+ 
+- [Listening Mirrors](http://listeningmirrors.net/): an audio AR interactive installation by my PhD supervisors
+- [Laetitia Sonami](https://sonami.net/): pioneer in early glove-based interactive music systems
+- [Atau Tanaka](https://www.youtube.com/watch?v=p8CKjmE7zys): interactive gestural synthesis using muscle sensors
+- [Keijiro Takahashi](https://github.com/keijiro) specifically their work with audio-reactivity in Unity.
+- [Tekh:2](https://github.com/TEKH2/XR-Audio-Visual-Instruments) has created XR instruments using granular synthesis in Unity.
+- [Amy Brandon](https://www.amybrandon.ca/) creates amazing musical AR performances.
 </details>
 
 <details>
@@ -40,21 +53,6 @@ This project uses the open-source [Project North Star](https://docs.projectnorth
 - [Pure Data](https://puredata.info/) allows **extended audio techniques** through an extensive library of algorithmic 'objects' that can create and manipulate audio signals.
 - [LibPdIntegration](https://github.com/LibPdIntegration/LibPdIntegration) allows **real-time parameter control** in Unity of any object in a Pd patch via "receive" objects and a specific C# method.
 - The combination of "Play Mode" toggling in Unity, and the quick visual patching style of [Pure Data](https://puredata.info/) means that audio-visual interactions can be **prototyped very rapidly**
-</details>
-
-## Demonstration
-[<img alt="particle synthesisers" width="350px" src="particle-video.png" />](https://www.youtube.com/watch?v=gY2QtK907cU)
-[<img alt="user studies" width="350px" src="polaris-video.png" />](https://youtu.be/lCBgMs8ULj0)
-
-<details>
-<summary><h2>Inspiration and Similar Projects</h2></summary>
- 
-- [Listening Mirrors](http://listeningmirrors.net/): an audio AR interactive installation by my PhD supervisors
-- [Laetitia Sonami](https://sonami.net/): pioneer in early glove-based interactive music systems
-- [Atau Tanaka](https://www.youtube.com/watch?v=p8CKjmE7zys): interactive gestural synthesis using muscle sensors
-- [Keijiro Takahashi](https://github.com/keijiro) specifically their work with audio-reactivity in Unity.
-- [Tekh:2](https://github.com/TEKH2/XR-Audio-Visual-Instruments) has created XR instruments using granular synthesis in Unity.
-- [Amy Brandon](https://www.amybrandon.ca/) creates amazing musical AR performances.
 </details>
 
 <details>
