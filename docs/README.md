@@ -42,11 +42,9 @@ This project uses the open-source [Project North Star](https://docs.projectnorth
 - The combination of "Play Mode" toggling in Unity, and the quick visual patching style of [Pure Data](https://puredata.info/) means that audio-visual interactions can be **prototyped very rapidly**
 </details>
 
-## September 2021 - Prototyping Experiences
-[![particle synthesizers](september.png)](https://www.youtube.com/watch?v=gY2QtK907cU "particle synthesizers")
-
-## October 2021 - User Studies
-[![particle synthesizers](october.png)](https://youtu.be/lCBgMs8ULj0 "user study demo")
+## Demonstration
+[<img alt="particle synthesisers" width="350px" src="particle-video.png" />](https://www.youtube.com/watch?v=gY2QtK907cU)
+[<img alt="user studies" width="350px" src="polaris-video.png" />](https://youtu.be/lCBgMs8ULj0)
 
 <details>
 <summary><h2>Inspiration and Similar Projects</h2></summary>
