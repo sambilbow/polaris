@@ -1,4 +1,6 @@
 # polaris~ - Developing open-source multisensory AR instruments / experiences.
+<img src="demo.gif" width="1040"/>
+
 ## Summary
 
 If an AR system can be thought of as one that combines real and virtual processes, is interactive in real-time, and is registered in three dimensions; why do we witness the majority of AR applications utilising primarily visual displays of information? I propose a practice-led compositional approach for developing multisensory AR experiences’, arguing that, as an medium that combines real and virtual multisensory processes, it must explored with a multisensory approach.
