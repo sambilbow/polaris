@@ -17,13 +17,13 @@ NB: This repository started off as a fork of the [Software Companion](https://gi
 - [Automatonism](https://www.automatonism.com/the-software): a library of [Pure Data Vanilla](https://puredata.info/) patches that emulate modules of a synthesizer.
 - A set of example scripts and scenes that use the above components to demonstrate possible interactions between head/hand tracking and patch parameters in Pd, with the chief aim of creating a set of expressive multisensory AR instruments / experiences.
 
-## Demonstration
-[<img alt="user studies" width="350px" src="study-video.png" />](https://youtu.be/lCBgMs8ULj0)
-[<img alt="particle synthesisers" width="350px" src="particle-video.png" />](https://youtu.be/gY2QtK907cU)
-
-[<img alt="palm synthesisers" width="350px" src="palm-video.png" />](https://youtu.be/miQI4jetETs)
-[<img alt="finger synthesisers" width="350px" src="finger-video.png" />](https://youtu.be/dJUd0186NbA)
-[<img alt="basic libpd patch explanation" width="350px" src="libpd-video.png" />](https://youtu.be/CzJlEEcOt-A)
+## Media
+[![{Presentation}](https://ytcards.demolab.com/?id=eCdQku5hFOE&title=Presentation&lang=en&timestamp=1655660340&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&width=250 "Presentation")](https://youtu.be/eCdQku5hFOE)
+[![{Demonstration}](https://ytcards.demolab.com/?id=lCBgMs8ULj0&title=Demonstration&lang=en&timestamp=1634924340&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&width=250 "Demonstration")](https://youtu.be/lCBgMs8ULj0)
+[![{Prototype}](https://ytcards.demolab.com/?id=gY2QtK907cU&title=Prototype&lang=en&timestamp=1632850740&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&width=250 "Prototype")](https://youtu.be/gY2QtK907cU)
+[![{Palm Synth}](https://ytcards.demolab.com/?id=miQI4jetETs&title=Palm+Synth&lang=en&timestamp=1629308340&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&width=250 "Palm Synth")](https://youtu.be/miQI4jetETs)
+[![{Finger Synth}](https://ytcards.demolab.com/?id=dJUd0186NbA&title=Finger+Synth&lang=en&timestamp=1629135540&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&width=250 "Finger Synth")](https://youtu.be/dJUd0186NbA)
+[![{LibPd Explainer}](https://ytcards.demolab.com/?id=CzJlEEcOt-A&title=LibPd+Explainer&lang=en&timestamp=1629049140&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&width=250 "LibPd Explainer")](https://youtu.be/CzJlEEcOt-A)
 
 <details>
 <summary><h2>Features</h2></summary>
