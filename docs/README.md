@@ -1,4 +1,4 @@
-# polaris~ - Developing open-source multisensory AR instruments / experiences.
+# polaris~ - An Audiovisual Augmented Reality Experience Built on Open-Source Hardware and Software
 <img src="demo.gif" width="1040"/>
 
 ## Summary
