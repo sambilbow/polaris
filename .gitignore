@@ -12,6 +12,7 @@ builds/
 logs/
 Assets/AssetStoreTools*
 *.log
+UserSettings/
 # Visual Studio cache directory
 .vs/
 temp.raw
