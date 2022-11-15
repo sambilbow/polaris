@@ -9,6 +9,8 @@ This project uses the open-source [Project North Star](https://docs.projectnorth
 
 [Conference Paper](https://doi.org/10.21428/92fbeb44.8abb9ce6)
 
+NB: This repository started off as a fork of the [Software Companion](https://github.com/HyperLethalVector/ProjectEsky-UnityIntegration) for Project North Star as a template, hence the varied 'Contributors'. However, all audio-visual / artistic / musical content is my own.
+
 ## Components
 - [Software Companion](https://github.com/HyperLethalVector/ProjectEsky-UnityIntegration) for the [Project North Star](https://docs.projectnorthstar.org/) open-source AR headset that allows developing Unity scenes with MRTK/Leap Motion assets.
 - [LibPdIntegration](https://github.com/LibPdIntegration/LibPdIntegration): a wrapper for [libpd](https://github.com/libpd/libpd) that allows for the implementation of [Pure Data](https://puredata.info/) patches into [Unity](https://unity3d.com/)
