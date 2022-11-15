@@ -1,16 +1,21 @@
 # polaris~ - Developing open-source multisensory AR instruments / experiences.
+## Summary
 
 If an AR system can be thought of as one that combines real and virtual processes, is interactive in real-time, and is registered in three dimensions; why do we witness the majority of AR applications utilising primarily visual displays of information? I propose a practice-led compositional approach for developing multisensory AR experiences’, arguing that, as an medium that combines real and virtual multisensory processes, it must explored with a multisensory approach.
 
-This project uses the open-souce [Project North Star](https://docs.projectnorthstar.org/) HMD from Leap Motion alongside bone-conduction headphones to deliver spatialised audio-visual experience via Unity. My experiences creating and developing this project can be found [on my website](https://www.sambilbow.com) under [polaris~](https://sambilbow.com/projects/polaris/index.html) in the project section.
+This project uses the open-source [Project North Star](https://docs.projectnorthstar.org/) HMD from Leap Motion alongside bone-conduction headphones to deliver a spatialised audio-visual experience via Unity called polaris~.
 
-This repository is a fork of [Project Esky](https://github.com/HyperLethalVector/ProjectEsky-UnityIntegration) that includes 
-- [Project Esky](https://github.com/HyperLethalVector/ProjectEsky-UnityIntegration): a software companion for the [Project North Star](https://docs.projectnorthstar.org/) open-source AR headset that allows developing Unity scenes with MRTK/Leap assets.
+[Project Link](https://sambilbow.com/projects/polaris)
+
+[Conference Paper](https://doi.org/10.21428/92fbeb44.8abb9ce6)
+
+### Components 
+- [Software Companion](https://github.com/HyperLethalVector/ProjectEsky-UnityIntegration) for the [Project North Star](https://docs.projectnorthstar.org/) open-source AR headset that allows developing Unity scenes with MRTK/Leap Motion assets.
 - [LibPdIntegration](https://github.com/LibPdIntegration/LibPdIntegration): a wrapper for [libpd](https://github.com/libpd/libpd) that allows for the implementation of [Pure Data](https://puredata.info/) patches into [Unity](https://unity3d.com/)
 - [Automatonism](https://www.automatonism.com/the-software): a library of [Pure Data Vanilla](https://puredata.info/) patches that emulate modules of a synthesizer.
-- A set of example scripts and scenes that use them to demonstrate possible interactions between head/hand tracking and patch parameters in Pd, with the chief aim of creating a set of expressive multisensory AR instruments / experiences.
+- A set of example scripts and scenes that use the above components to demonstrate possible interactions between head/hand tracking and patch parameters in Pd, with the chief aim of creating a set of expressive multisensory AR instruments / experiences.
 
-## Features
+## Technical Setup
 ### Hardware features
 - Six degrees-of-freedom (3D position / orientation) head tracking via [Intel T261]()
 - 90 fps, 170° hand tracking via [Ultraleap](https://www.ultraleap.com/product/stereo-ir-170/)
