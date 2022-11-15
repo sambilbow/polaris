@@ -28,9 +28,9 @@ This project uses the open-source [Project North Star](https://docs.projectnorth
 - 2x 3-metre cables (1x miniDP, 1x USB-A 3.1)
 - Spatial audio AR (the ability to hear localised sound whilst being able to hear your real audio environment) via Unity3D and [Aftershokz Aeropex](https://aftershokz.co.uk/products/aeropex) bone conduction headphones.
 
-### Engine (Unity3D / Project Esky) features
+### Engine (Unity3D / Software Companion) features
 - The ability to create 3D scenes that contain 'GameObjects' that in turn can have visual attributes such as 3D meshes, material colours, and textural properties; physical attributes such as edges, position, mass, velocity and real-time parameterisation via C# scripting.
-- Thanks to Project Esky, the headset is created as a GameObject with real-time position / orientation.
+- Thanks to the Software Companion, the headset is created as a GameObject with real-time position / orientation.
 - Thanks to [LeapMotion](https://github.com/leapmotion/UnityModules), hands (all the way down to individual finger joints) are created as GameObjects with real-time position / orientation relative to the headset.
 
 
@@ -63,7 +63,7 @@ This project uses the open-source [Project North Star](https://docs.projectnorth
 <summary><h2>Acknowledgements</h2></summary>
 
 - [Noah Zerkin](https://twitter.com/noazark) (CombineReality) for their help in understanding some specifics workings of the North Star headset.
-- [Damien Rompapas](https://www.linkedin.com/in/dr-damien-rompapas-3a4b63170/?originalSubdomain=jp) (BEERLabs / ThinkDigital) for their explaining and debugging of Project Esky to me.
+- [Damien Rompapas](https://www.linkedin.com/in/dr-damien-rompapas-3a4b63170/?originalSubdomain=jp) (BEERLabs / ThinkDigital) for their explaining and debugging of the Software Companion to me.
 - [Bryan Chris Brown](https://twitter.com/BryanChrisBrown) (CombineReality) for their moderation of the very friendly [Discord server](https://discord.gg/WnzNZa3qnf) and considerable explanations of the benefits of working with the North Star headset.
 </details>
 
@@ -72,7 +72,7 @@ This project uses the open-source [Project North Star](https://docs.projectnorth
 
 - [Project North Star](https://docs.projectnorthstar.org/) is the 3D printable AR headset by LeapMotion that has been open-source since 2018.
 
-- [Project Esky](https://github.com/HyperLethalVector/ProjectEsky-UnityIntegration) is developed by [Damien Rompapas](/) at BEERLabs / ThinkDigital. **If you use polaris~ in an academic context, please cite [their paper](https://dl.acm.org/doi/10.1145/3411763.3451804)**
+- [Software Companion](https://github.com/HyperLethalVector/ProjectEsky-UnityIntegration) for Project North Star is developed by [Damien Rompapas](/) at BEERLabs / ThinkDigital. **If you use polaris~ in an academic context, please cite [their paper](https://dl.acm.org/doi/10.1145/3411763.3451804)**
 
 - [LibPdIntegration](https://github.com/LibPdIntegration/LibPdIntegration) is developed by [Niall Moody](http://www.niallmoody.com) at [Abertay University](http://www.abertay.ac.uk), with assistance from [Yann Seznec](http://www.yannseznec.com/). It is licensed under the [MIT License](https://github.com/LibPdIntegration/LibPdIntegration/blob/master/LICENSE.txt).
 
