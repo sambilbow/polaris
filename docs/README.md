@@ -8,15 +8,19 @@ This project uses the open-source [Project North Star](https://docs.projectnorth
 [Project Link](https://sambilbow.com/projects/polaris)
 
 [Conference Paper](https://doi.org/10.21428/92fbeb44.8abb9ce6)
+<details>
+<summary><h2>Components</h2></summary>
 
-### Components 
 - [Software Companion](https://github.com/HyperLethalVector/ProjectEsky-UnityIntegration) for the [Project North Star](https://docs.projectnorthstar.org/) open-source AR headset that allows developing Unity scenes with MRTK/Leap Motion assets.
 - [LibPdIntegration](https://github.com/LibPdIntegration/LibPdIntegration): a wrapper for [libpd](https://github.com/libpd/libpd) that allows for the implementation of [Pure Data](https://puredata.info/) patches into [Unity](https://unity3d.com/)
 - [Automatonism](https://www.automatonism.com/the-software): a library of [Pure Data Vanilla](https://puredata.info/) patches that emulate modules of a synthesizer.
 - A set of example scripts and scenes that use the above components to demonstrate possible interactions between head/hand tracking and patch parameters in Pd, with the chief aim of creating a set of expressive multisensory AR instruments / experiences.
+</details>
 
-## Technical Setup
-### Hardware features
+<details>
+<summary><h2>Features</h2></summary>
+
+### Hardware
 - Six degrees-of-freedom (3D position / orientation) head tracking via [Intel T261]()
 - 90 fps, 170° hand tracking via [Ultraleap](https://www.ultraleap.com/product/stereo-ir-170/)
 - Single piece optical combiner allowing for up to 110° horizontal FoV
@@ -36,34 +40,13 @@ This project uses the open-source [Project North Star](https://docs.projectnorth
 - [Pure Data](https://puredata.info/) allows **extended audio techniques** through an extensive library of algorithmic 'objects' that can create and manipulate audio signals.
 - [LibPdIntegration](https://github.com/LibPdIntegration/LibPdIntegration) allows **real-time parameter control** in Unity of any object in a Pd patch via "receive" objects and a specific C# method.
 - The combination of "Play Mode" toggling in Unity, and the quick visual patching style of [Pure Data](https://puredata.info/) means that audio-visual interactions can be **prototyped very rapidly**
+</details>
 
 ## September 2021 - Prototyping Experiences
 [![particle synthesizers](september.png)](https://www.youtube.com/watch?v=gY2QtK907cU "particle synthesizers")
 
 ## October 2021 - User Studies
 [![particle synthesizers](october.png)](https://youtu.be/lCBgMs8ULj0 "user study demo")
-
-## February 2022 - Experimental AR Performance 
-[![particle synthesizers](february.png)](https://youtu.be/9IErsDvhXjM "experimental performance")
-
-## Caveats
-Although there is a great deal that could be done to ensure equity of computational power around the planet, polaris~ strives to use completely **open-source, free and, where possible cross-platform**, elements in order to increase accessibility to cutting-edge AR technologies for those who often can't afford the mainstream consumer alternatives. The only exceptions to this so far is:
-- polaris~ requires a computer to create the scenes in Unity.
-  - *Cheaper wearable compute packs are currently being prototyped by CombineReality.*
-- Project Esky being Windows only. This is because there is no up-to-date MacOS Ultraleap (hand tracking) driver. 
-  - *Ultraleap are working on this for their V5 release (some time in 2021), but would still require a Project Esky rewrite as far as I know*
-- The firmware code for the head-tracker is not open-sourced by Intel `and the product range has just been discontinued!!` Whilst this is not necessary for the project, it could have allowed further interaction. 
-  - *Some geniuses are working on implementing open-source modular [Luxonis](https://shop.luxonis.com/collections/modular-cameras) cameras to replace the head-tracking sensor that the project currently relies on Intel for*
-- My audio AR solution, which is currently a set of wireless [Aftershokz Aeropex](https://aftershokz.co.uk/products/aeropex) bone conduction headphones are pricy. 
-  - *I am very interested in desigining a bone conduction transducer design which is mounted to the headset itself, similar to how the Vive VR headset has speakers that are attached to its main body. Alternatively, cheaper bone-conduction headphones can be used.*
-
-
-## Quickstart
-`Coming Soon`
-### Setting up a new instrument/experience project
-### Deciding on your hands
-### How to use LibPdIntegration
-### Using LibPdIntegration with Automatonism
 
 <details>
 <summary><h2>Inspiration and Similar Projects</h2></summary>
