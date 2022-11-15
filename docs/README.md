@@ -11,7 +11,7 @@ This project uses the open-source [Project North Star](https://docs.projectnorth
 
 [Conference Paper](https://doi.org/10.21428/92fbeb44.8abb9ce6)
 
-NB: This repository started off as a fork of the [Software Companion](https://github.com/HyperLethalVector/ProjectEsky-UnityIntegration) for Project North Star as a template, hence the varied 'Contributors'. However, all audio-visual / artistic / musical content is my own.
+NB: This repository started off as a fork of the [Software Companion](https://github.com/HyperLethalVector/ProjectEsky-UnityIntegration) for Project North Star as a template, hence the varied 'Contributors' (Damien) and long list of commits. However, all audio-visual / artistic / musical content is my own.
 
 ## Components
 - [Software Companion](https://github.com/HyperLethalVector/ProjectEsky-UnityIntegration) for the [Project North Star](https://docs.projectnorthstar.org/) open-source AR headset that allows developing Unity scenes with MRTK/Leap Motion assets.
