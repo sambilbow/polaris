@@ -9,7 +9,7 @@
 
 
 [![Platform](https://img.shields.io/badge/Platform-Windows-yellow?style=flat-square&logo=windows)](https://www.microsoft.com/en-gb/windows/)
-[![Environment](https://img.shields.io/badge/Environment-Unity-orange?style=flat-square&logo=unity&logoColor=white)](https://unity.com/)
+[![Environment](https://img.shields.io/badge/Environment-Unity/Pd-orange?style=flat-square&logo=unity&logoColor=white)](https://unity.com/)
 [![Publication](https://img.shields.io/badge/Publication-NIME-green?style=flat-square&logo=readthedocs&logoColor=white)](https://doi.org/10.21428/92fbeb44.8abb9ce6)
 [![Documentation](https://img.shields.io/badge/Guide-TBA-red?style=flat-square&logo=todoist&logoColor=white)](https://github.com/sambilbow/polaris/wiki)
 [![Project](https://img.shields.io/badge/Project-Blog-blue?style=flat-square&logo=jekyll&logoColor=white)](https://sambilbow.com/projects/polaris/)
