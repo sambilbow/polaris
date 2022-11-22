@@ -1,17 +1,40 @@
-# polaris~ - An Audiovisual Augmented Reality Experience Built on Open-Source Hardware and Software
-<img src="demo.gif" width="1040"/>
+<div align="center">
 
-## Summary
+# `polaris~`
+
+<img src="demo.gif" width="680"/>
+
+**An Audiovisual Augmented Reality Experience Built on Open-Source Hardware and Software**
+
+
+
+[![Platform](https://img.shields.io/badge/Platform-Windows-yellow?style=flat-square&logo=windows)](https://www.microsoft.com/en-gb/windows/)
+[![Environment](https://img.shields.io/badge/Environment-Unity-orange?style=flat-square&logo=unity&logoColor=white)](https://unity.com/)
+[![Publication](https://img.shields.io/badge/Publication-NIME-green?style=flat-square&logo=readthedocs&logoColor=white)](https://doi.org/10.21428/92fbeb44.8abb9ce6)
+[![Documentation](https://img.shields.io/badge/Guide-TBA-red?style=flat-square&logo=todoist&logoColor=white)](https://github.com/sambilbow/polaris/wiki)
+[![Project](https://img.shields.io/badge/Project-Blog-blue?style=flat-square&logo=jekyll&logoColor=white)](https://sambilbow.com/projects/polaris/)
+[![Discord](https://img.shields.io/badge/Discord-XRt%20Space-%237289da.svg?style=flat-square&logo=discord&logoColor=white)](https://discord.gg/p3MmURSBV3)
+
+
+</div>
 
 If an AR system can be thought of as one that combines real and virtual processes, is interactive in real-time, and is registered in three dimensions; why do we witness the majority of AR applications utilising primarily visual displays of information? I propose a practice-led compositional approach for developing multisensory AR experiences’, arguing that, as an medium that combines real and virtual multisensory processes, it must explored with a multisensory approach.
 
-This project uses the open-source [Project North Star](https://docs.projectnorthstar.org/) HMD from Leap Motion alongside bone-conduction headphones to deliver a spatialised audio-visual experience via Unity called polaris~.
+This project uses the open-source [Project North Star](https://docs.projectnorthstar.org/) HMD from Leap Motion alongside bone-conduction headphones to deliver a spatialised audio-visual experience via Unity called polaris~. This repository started off as a fork of the [Software Companion](https://github.com/HyperLethalVector/ProjectEsky-UnityIntegration) for Project North Star, hence the other repository contributors and long list of commits. However, the experience itself including all audio-visual / artistic / musical content was added afterwards.
 
-[Project Link](https://sambilbow.com/projects/polaris)
 
-[Conference Paper](https://doi.org/10.21428/92fbeb44.8abb9ce6)
 
-NB: This repository started off as a fork of the [Software Companion](https://github.com/HyperLethalVector/ProjectEsky-UnityIntegration) for Project North Star as a template, hence the varied 'Contributors' (Damien) and long list of commits. However, all audio-visual / artistic / musical content is my own.
+<div align="center">
+<br>
+
+[![{Presentation}](https://ytcards.demolab.com/?id=eCdQku5hFOE&title=Presentation&lang=en&timestamp=1655660340&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&width=250&duration=548 "Presentation")](https://youtu.be/eCdQku5hFOE)
+[![{Demonstration}](https://ytcards.demolab.com/?id=lCBgMs8ULj0&title=Demonstration&lang=en&timestamp=1634924340&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&width=250&duration=529 "Demonstration")](https://youtu.be/lCBgMs8ULj0)
+[![{Prototype}](https://ytcards.demolab.com/?id=gY2QtK907cU&title=Prototype&lang=en&timestamp=1632850740&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&width=250&duration=174 "Prototype")](https://youtu.be/gY2QtK907cU)
+[![{Palm Synth}](https://ytcards.demolab.com/?id=miQI4jetETs&title=Palm+Synth&lang=en&timestamp=1629308340&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&width=250&duration=90 "Palm Synth")](https://youtu.be/miQI4jetETs)
+[![{Finger Synth}](https://ytcards.demolab.com/?id=dJUd0186NbA&title=Finger+Synth&lang=en&timestamp=1629135540&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&width=250&duration=36 "Finger Synth")](https://youtu.be/dJUd0186NbA)
+[![{LibPd Explainer}](https://ytcards.demolab.com/?id=CzJlEEcOt-A&title=LibPd+Explainer&lang=en&timestamp=1629049140&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&width=250&duration=799 "LibPd Explainer")](https://youtu.be/CzJlEEcOt-A)
+
+</div>
 
 ## Components
 - [Software Companion](https://github.com/HyperLethalVector/ProjectEsky-UnityIntegration) for the [Project North Star](https://docs.projectnorthstar.org/) open-source AR headset that allows developing Unity scenes with MRTK/Leap Motion assets.
@@ -19,13 +42,6 @@ NB: This repository started off as a fork of the [Software Companion](https://gi
 - [Automatonism](https://www.automatonism.com/the-software): a library of [Pure Data Vanilla](https://puredata.info/) patches that emulate modules of a synthesizer.
 - A set of example scripts and scenes that use the above components to demonstrate possible interactions between head/hand tracking and patch parameters in Pd, with the chief aim of creating a set of expressive multisensory AR instruments / experiences.
 
-## Media
-[![{Presentation}](https://ytcards.demolab.com/?id=eCdQku5hFOE&title=Presentation&lang=en&timestamp=1655660340&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&width=250&duration=548 "Presentation")](https://youtu.be/eCdQku5hFOE)
-[![{Demonstration}](https://ytcards.demolab.com/?id=lCBgMs8ULj0&title=Demonstration&lang=en&timestamp=1634924340&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&width=250&duration=529 "Demonstration")](https://youtu.be/lCBgMs8ULj0)
-[![{Prototype}](https://ytcards.demolab.com/?id=gY2QtK907cU&title=Prototype&lang=en&timestamp=1632850740&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&width=250&duration=174 "Prototype")](https://youtu.be/gY2QtK907cU)
-[![{Palm Synth}](https://ytcards.demolab.com/?id=miQI4jetETs&title=Palm+Synth&lang=en&timestamp=1629308340&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&width=250&duration=90 "Palm Synth")](https://youtu.be/miQI4jetETs)
-[![{Finger Synth}](https://ytcards.demolab.com/?id=dJUd0186NbA&title=Finger+Synth&lang=en&timestamp=1629135540&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&width=250&duration=36 "Finger Synth")](https://youtu.be/dJUd0186NbA)
-[![{LibPd Explainer}](https://ytcards.demolab.com/?id=CzJlEEcOt-A&title=LibPd+Explainer&lang=en&timestamp=1629049140&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&width=250&duration=799 "LibPd Explainer")](https://youtu.be/CzJlEEcOt-A)
 
 <details>
 <summary><h2>Features</h2></summary>
