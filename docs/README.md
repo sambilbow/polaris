@@ -36,38 +36,6 @@ This project uses the open-source [Project North Star](https://docs.projectnorth
 
 </div>
 
-## Components
-- [Software Companion](https://github.com/HyperLethalVector/ProjectEsky-UnityIntegration) for the [Project North Star](https://docs.projectnorthstar.org/) open-source AR headset that allows developing Unity scenes with MRTK/Leap Motion assets.
-- [LibPdIntegration](https://github.com/LibPdIntegration/LibPdIntegration): a wrapper for [libpd](https://github.com/libpd/libpd) that allows for the implementation of [Pure Data](https://puredata.info/) patches into [Unity](https://unity3d.com/)
-- [Automatonism](https://www.automatonism.com/the-software): a library of [Pure Data Vanilla](https://puredata.info/) patches that emulate modules of a synthesizer.
-- A set of example scripts and scenes that use the above components to demonstrate possible interactions between head/hand tracking and patch parameters in Pd, with the chief aim of creating a set of expressive multisensory AR instruments / experiences.
-
-
-<details>
-<summary><h2>Features</h2></summary>
-
-### Hardware
-- Six degrees-of-freedom (3D position / orientation) head tracking via [Intel T261]()
-- 90 fps, 170° hand tracking via [Ultraleap](https://www.ultraleap.com/product/stereo-ir-170/)
-- Single piece optical combiner allowing for up to 110° horizontal FoV
-- 2x 120Hz displays per-eye for a total resolution of 2880x1600 
-- 2x 3-metre cables (1x miniDP, 1x USB-A 3.1)
-- Spatial audio AR (the ability to hear localised sound whilst being able to hear your real audio environment) via Unity3D and [Aftershokz Aeropex](https://aftershokz.co.uk/products/aeropex) bone conduction headphones.
-
-### Engine (Unity3D / Software Companion) features
-- The ability to create 3D scenes that contain 'GameObjects' that in turn can have visual attributes such as 3D meshes, material colours, and textural properties; physical attributes such as edges, position, mass, velocity and real-time parameterisation via C# scripting.
-- Thanks to the Software Companion, the headset is created as a GameObject with real-time position / orientation.
-- Thanks to [LeapMotion](https://github.com/leapmotion/UnityModules), hands (all the way down to individual finger joints) are created as GameObjects with real-time position / orientation relative to the headset.
-
-
-### Audio (LibPdIntegration/Pd) features
-- [LibPdIntegration](https://github.com/LibPdIntegration/LibPdIntegration) uses **native Unity3D audio spatialisation**. This is great because it means that a GameObject can output the signal of a Pd patch whilst moving, rotating and scaling. The effect of these can perceived in real-time because the AudioListener is anchored to the real-time headset position. This, for example, means that the volume of a Pd patch whose signal is being transmitted from a GameObject located in space is automatically scaled dependent on its distance to the participants head (quieter as it gets further away, louder as it is brought closer).
-- [LibPdIntegration](https://github.com/LibPdIntegration/LibPdIntegration) can **'instance' Pd patches**, meaning it can use one patch on multiple GameObjects, but maintain processes like randomness within them as they are technically different 'instances' or versions of the patch.
-- [Pure Data](https://puredata.info/) allows **extended audio techniques** through an extensive library of algorithmic 'objects' that can create and manipulate audio signals.
-- [LibPdIntegration](https://github.com/LibPdIntegration/LibPdIntegration) allows **real-time parameter control** in Unity of any object in a Pd patch via "receive" objects and a specific C# method.
-- The combination of "Play Mode" toggling in Unity, and the quick visual patching style of [Pure Data](https://puredata.info/) means that audio-visual interactions can be **prototyped very rapidly**
-</details>
-
 <details>
 <summary><h2>Inspiration and Similar Projects</h2></summary>
  
